@@ -46,7 +46,6 @@ escape_scores <- GetAssayData(scRep_data, assay = "escape.ssGSEA", slot = "data"
 ################################################################
 ### Visualization: dot plots
 ################################################################
-
 # Create the plots with consistent ylim and larger text
 p1 <- geyserEnrichment(scRep_data, 
                        assay = "escape.ssGSEA",
@@ -63,7 +62,6 @@ p2 <- geyserEnrichment(scRep_data,
 
 # Combine plots
 p1 + p2
-
 ################################################################
 # Calculating Cliff's delta values
 ################################################################
@@ -71,9 +69,9 @@ p1 + p2
 X1 <- as.numeric(escape_scores[1, ])
 X2 <- as.numeric(escape_scores[2, ])
 
-cd_1 <- cliff.delta(X1, X2)
+cd <- cliff.delta(X1, X2)
 
 # calculating p-value using Wilcoxon rank-sum test ---
 wilcox_res <- wilcox.test(X1, X2, exact = FALSE)
-pval_1 <- wilcox_res$p.value
-pval_1
+pval <- wilcox_res$p.value
+pval
