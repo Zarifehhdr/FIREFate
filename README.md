@@ -4,5 +4,3 @@ FIREFate (Functional and Interpretable Regulatory Encoding of Fate determination
 =======
 # B-Cells
 B cell GRN second manuscript
-hello
->>>>>>> ad73ab5 (initial)
